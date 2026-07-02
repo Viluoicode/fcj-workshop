@@ -13,13 +13,13 @@ chapter: false
 {{% /notice %}}
 
 ### Student Information:
-&emsp; **Full Name:** Nguyen Van A
+&emsp; **Full Name:** Tran Vi
 
-&emsp; **Phone Number:** 0989888999 
+&emsp; **Phone Number:** 0399752676
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** tran.vi0328@gmail.com
 
-&emsp; **University:** Ho Chi Minh City University of Technology and Education
+&emsp; **University:** Dong Nai Technology University 
 
 &emsp; **Major:** Information Technology
 
@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 12/08/2025 to 12/11/2025
+&emsp; **Internship Duration:** From 1/07/2026 to 31/12/2026
 
 ![Your profile picture](/images/avatar.png)
 
