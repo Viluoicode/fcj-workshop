@@ -40,3 +40,27 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 **Tuần 12:** [Làm công việc N...](1.12-week12/)
 
 **Tuần 13:** [Tổng kết kiến thức AWS nền tảng và Infrastructure as Code](1.13-week13/)
+
+**Tuần 14:** [Thực hiện dự án](1.14-week14/)
+
+**Tuần 15:** [Thực hiện dự án](1.15-week15/)
+
+**Tuần 16:** [Thực hiện dự án](1.16-week16/)
+
+**Tuần 17:** [Thực hiện dự án](1.17-week17/)
+
+**Tuần 18:** [Thực hiện dự án](1.18-week18/)
+
+**Tuần 19:** [Thực hiện dự án](1.19-week19/)
+
+**Tuần 20:** [Thực hiện dự án](1.20-week20/)
+
+**Tuần 21:** [Thực hiện dự án](1.21-week21/)
+
+**Tuần 22:** [Thực hiện dự án](1.22-week22/)
+
+**Tuần 23:** [Thực hiện dự án](1.23-week23/)
+
+**Tuần 24:** [Thực hiện dự án](1.24-week24/)
+
+**Tuần 25:** [Thực hiện dự án](1.25-week25/)

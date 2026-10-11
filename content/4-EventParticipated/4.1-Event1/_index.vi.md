@@ -1,125 +1,156 @@
 ---
-title: "Event 1"
-date: 2024-01-01
+title: "Prove It: Agentic Cloud Investigation Series"
+date: 2026-09-19
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Bài thu hoạch “Prove It: Agentic Cloud Investigation Series”
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+### Thông tin sự kiện
 
-### Mục Đích Của Sự Kiện
+- **Đơn vị tổ chức:** CloudThinker × First Cloud AI Journey (FCAJ)
+- **Thời gian:** Ngày 05, 12 và 19/09/2026 · 09:00–12:00
+- **Địa điểm:** Văn phòng AWS, tầng 26, Bitexco Financial Tower, số 2 đường Hải Triều, phường Sài Gòn, Thành phố Hồ Chí Minh
+- **Vai trò:** Người tham dự và thành viên **Team HCM15 (Tyrex)**
+- **Hình thức:** Chuỗi ba workshop thực hành trên AWS và Kubernetes demo environment có quyền read-only
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+### Mục tiêu sự kiện
 
-### Danh Sách Diễn Giả
+- Học cách quản trị AI Agent trước khi cấp quyền truy cập cloud environment.
+- Điều tra cloud incident bằng cách kiểm tra competing hypotheses và thu thập evidence có thể truy nguồn.
+- Thực hành làm việc với AI Agent dưới identity, permission, guardrail và operating boundary rõ ràng.
+- Rèn luyện khả năng bảo vệ kết luận kỹ thuật trong điều kiện giới hạn thời gian.
+- Hoàn thành ba portfolio artifact: Agentic Cloud Review, Incident Report và Investigation Dossier.
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+### Nguyên tắc của chương trình
 
-### Nội Dung Nổi Bật
+Chương trình nhấn mạnh nguyên tắc **evidence over confidence**. Người tham dự không cung cấp AWS credential cá nhân và không thay đổi infrastructure. Các demo environment chỉ có quyền read-only: nhóm được inspect, analyze, investigate và recommend nhưng không được execute remediation.
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+Mỗi buổi được tổ chức theo cấu trúc **LEARN → PRACTICE → SHARE**, kết hợp kiến thức hướng dẫn, điều tra thực hành và chia sẻ kết quả.
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+### Day 01 — GOVERN · Observe Before You Act
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+**Thứ Bảy, ngày 05/09/2026**
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+#### Hoạt động chính
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- Tìm hiểu sự thay đổi của ranh giới bảo mật khi AI Agent được cấp quyền truy cập cloud environment.
+- Xác định identity của Agent và thiết kế permission theo nguyên tắc least privilege.
+- Xác định operating boundary và guardrail trước khi cấp quyền.
+- Sử dụng Agent có quyền read-only để review AWS demo account mà không thay đổi tài nguyên.
+- Ghi lại các quan sát, rủi ro và hành động đề xuất dựa trên evidence.
 
-#### Domain-Driven Design (DDD)
+#### Kết quả
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+- Hiểu vì sao phải thiết kế cơ chế quản trị Agent trước khi cấp quyền truy cập.
+- Phân biệt quyền quan sát read-only với quyền có thể thay đổi tài nguyên.
+- Thực hành giám sát Agent thay vì mặc định chấp nhận kết quả của Agent.
+- Hoàn thành artifact **Agentic Cloud Review** và phát triển kỹ năng **Agent Supervisor**.
 
-#### Event-Driven Architecture
+**Tài liệu:** [Day 01 — GOVERN](https://docs.cloudthinker.io/learn/workshops/prove-it/day-01-govern)
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+### Day 02 — INVESTIGATE · From Signal to Root Cause
 
-#### Compute Evolution
+**Thứ Bảy, ngày 12/09/2026**
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+#### Hoạt động chính
 
-#### Amazon Q Developer
+- Điều tra một cloud environment đã được cố ý cấu hình sai.
+- Challenge câu trả lời đầu tiên của Agent thay vì chấp nhận ngay giải thích ban đầu.
+- Xây dựng competing hypotheses và kiểm tra từng giả thuyết bằng evidence thu thập từ môi trường.
+- Ghi claim, source và evidence ủng hộ hoặc phản bác vào Evidence Table.
+- Xây dựng Causal Graph để kết nối các triệu chứng quan sát được với nguyên nhân gốc.
+- Tổng hợp quá trình điều tra thành Incident Report.
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+#### Kết quả
 
-### Những Gì Học Được
+- Cải thiện khả năng phân biệt observation, hypothesis, evidence và conclusion.
+- Thực hành loại bỏ claim không có bằng chứng và truy ngược mỗi kết luận về source.
+- Hoàn thành artifact **Incident Report** và phát triển kỹ năng **Agentic Incident Investigator**.
+- Team HCM15 (Tyrex) đạt **93,6/100 điểm** cho bài nộp Day 02.
 
-#### Tư Duy Thiết Kế
+**Tài liệu:** [Day 02 — INVESTIGATE](https://docs.cloudthinker.io/learn/workshops/prove-it/day-02-investigate)
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+### Day 03 — OPERATE · Prove It Arena
 
-#### Kiến Trúc Kỹ Thuật
+**Thứ Bảy, ngày 19/09/2026**
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### Hoạt động chính
 
-#### Chiến Lược Hiện Đại Hóa
+- Thi đấu Prove It Arena với vai trò thành viên Team HCM15 (Tyrex).
+- Tiếp nhận một cloud environment hoàn toàn mới và thực hiện rapid review.
+- Xây dựng Environment Map gồm các tài nguyên, dependency, ranh giới truy cập và rủi ro tiềm ẩn.
+- Phản ứng với incident inject trong điều kiện giới hạn thời gian.
+- Phân chia nhiệm vụ vận hành Agent, giữ giả thuyết đối lập, thu thập evidence, phân tích quan hệ nhân quả và chuẩn bị dossier.
+- Thu thập evidence kèm source và timestamp, xây dựng Causal Graph và hoàn thiện Investigation Dossier.
+- Bảo vệ kết luận của nhóm trước hội đồng giám khảo trong phần Final Defence.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+#### Kết quả
 
-### Ứng Dụng Vào Công Việc
+- Áp dụng toàn bộ quy trình điều tra: rapid review, xây dựng giả thuyết, thu thập evidence, causal reasoning, ra quyết định và bảo vệ kết luận.
+- Hoàn thành artifact **Investigation Dossier** và thực hành kỹ năng **Agentic Cloud Operator**.
+- Kết quả riêng của Day 03 chưa đạt kỳ vọng, cho thấy nhóm cần cải thiện việc phân chia vai trò, quản lý thời gian, kiểm chứng evidence và bảo vệ kỹ thuật.
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+**Tài liệu:** [Day 03 — Prove It Arena](https://docs.cloudthinker.io/learn/workshops/prove-it/day-03-prove-it-arena)
 
-### Trải nghiệm trong event
+### Tiêu chí chấm điểm Prove It Arena
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+- Agent governance và operating boundaries: **15 điểm**
+- Environment review và risk prioritization: **20 điểm**
+- Incident investigation và causal reasoning: **30 điểm**
+- Decision và remediation quality: **20 điểm**
+- Evidence defence và communication: **15 điểm**
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+Mỗi hint được sử dụng sẽ bị trừ hai điểm và claim không thể truy nguồn sẽ không được tính điểm. Kết luận insufficient evidence vẫn có thể được ghi nhận nếu được bảo vệ hợp lý.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+### Kết quả toàn bộ series
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+- Hoàn thành cả ba giai đoạn GOVERN, INVESTIGATE và OPERATE.
+- Hoàn thành ba portfolio artifact: Agentic Cloud Review, Incident Report và Investigation Dossier.
+- Phát triển ba kỹ năng Agent Supervisor, Agentic Incident Investigator và Agentic Cloud Operator.
+- Dựa trên kết quả tổng hợp của cả ba ngày, **Team HCM15 (Tyrex)** nhận giải **“Nhóm HCM có bài thi ấn tượng nhất.”**
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+### Bài học rút ra
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+- AI Agent phải hoạt động trong identity, permission scope và guardrail được xác định rõ ràng.
+- Câu trả lời đầu tiên của Agent chỉ là một hypothesis, chưa phải conclusion đã được kiểm chứng.
+- Mỗi claim quan trọng cần có evidence và source có thể truy ngược.
+- Competing hypotheses giúp giảm confirmation bias trong quá trình điều tra incident.
+- Làm việc nhóm hiệu quả cần phân vai rõ ràng cho việc vận hành Agent, ghi evidence, giữ giả thuyết đối lập, phân tích quan hệ nhân quả và viết báo cáo.
+- Kết luận hợp lý về mặt kỹ thuật vẫn chưa đủ nếu nhóm không thể trình bày và bảo vệ rõ ràng.
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+### Trải nghiệm tại sự kiện
+
+Chuỗi workshop mang lại góc nhìn thực tế về cách AI Agent hỗ trợ cloud operation mà không thay thế khả năng phán đoán của con người. Bài học quan trọng nhất là không xem confidence là đủ và luôn yêu cầu evidence trước khi chấp nhận một kết luận. Quá trình làm việc cùng Team HCM15 (Tyrex) cũng cho thấy vai trò của việc phân công rõ ràng, quản lý thời gian và giao tiếp trong một cuộc điều tra.
+
+Mặc dù kết quả Day 03 chưa đạt kỳ vọng, trải nghiệm này đã chỉ ra những điểm yếu cụ thể để nhóm cải thiện trong các bài thực hành incident response sau này. Việc hoàn thành toàn bộ series giúp kết nối cloud governance, investigation và operation thành một quy trình thống nhất dựa trên evidence.
+
+### Hình ảnh sự kiện
+
+#### Check-in tại văn phòng AWS
+
+![Người tham dự check-in tại sự kiện Prove It](../../../Image/Event%201/6C7A3010.jpg)
+
+#### Team HCM15 (Tyrex) thực hiện bài điều tra
+
+![Team HCM15 Tyrex tập trung thực hiện bài điều tra](../../../Image/Event%201/6C7A3113.jpg)
+
+#### Team HCM15 (Tyrex) tại không gian làm việc AWS
+
+![Team HCM15 Tyrex trong workshop Prove It tại văn phòng AWS](../../../Image/Event%201/6C7A3197.jpg)
+
+#### Nhận phần ghi nhận từ ban tổ chức
+
+![Các thành viên nhận quà từ ban tổ chức Prove It](../../../Image/Event%201/6C7A3326.jpg)
+
+![Team HCM15 Tyrex nhận quà tại Prove It Arena](../../../Image/Event%201/6C7A3331.jpg)
+
+#### Quà lưu niệm sau khi hoàn thành series
+
+![Team HCM15 Tyrex cùng quà tặng CloudThinker và AWS](../../../Image/Event%201/6C7A3353.jpg)
+
+#### Ảnh tập thể Prove It Arena
+
+![Người tham dự và ban tổ chức trong phần tổng kết Prove It Arena](../../../Image/Event%201/6C7A3383.jpg)

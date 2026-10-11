@@ -39,3 +39,27 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 **Week 12:** [Doing task N...](1.12-week12/)
 
 **Week 13:** [Reviewing foundational AWS services and Infrastructure as Code](1.13-week13/)
+
+**Week 14:** [Project work](1.14-week14/)
+
+**Week 15:** [Project work](1.15-week15/)
+
+**Week 16:** [Project work](1.16-week16/)
+
+**Week 17:** [Project work](1.17-week17/)
+
+**Week 18:** [Project work](1.18-week18/)
+
+**Week 19:** [Project work](1.19-week19/)
+
+**Week 20:** [Project work](1.20-week20/)
+
+**Week 21:** [Project work](1.21-week21/)
+
+**Week 22:** [Project work](1.22-week22/)
+
+**Week 23:** [Project work](1.23-week23/)
+
+**Week 24:** [Project work](1.24-week24/)
+
+**Week 25:** [Project work](1.25-week25/)
