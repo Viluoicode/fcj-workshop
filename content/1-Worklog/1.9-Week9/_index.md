@@ -1,57 +1,31 @@
 ---
 title: "Week 9 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-08-30
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 9 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand the difference between monitoring, logging, and auditing.
+* Learn the fundamental roles of Amazon CloudWatch and AWS CloudTrail.
+* Apply basic AWS cost-monitoring and resource-management practices.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn observability fundamentals: metrics, logs, events, dashboards, and alarms <br> - Distinguish monitoring from auditing | 24/08/2026 | 24/08/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html> |
+| Tue | - Learn Amazon CloudWatch metrics, namespaces, dimensions, dashboards, and standard EC2 metrics | 25/08/2026 | 25/08/2026 | <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html> |
+| Wed | - Learn CloudWatch Logs and alarms <br> - Inspect log groups and understand how alarms notify users when thresholds are exceeded | 26/08/2026 | 26/08/2026 | <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html> |
+| Thu | - Learn AWS CloudTrail: event history, management events, and how API activity is recorded for auditing | 27/08/2026 | 27/08/2026 | <https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html> |
+| Fri | - Learn AWS Budgets, Cost Explorer, resource tagging, and basic methods for identifying and removing unused resources | 28/08/2026 | 28/08/2026 | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
 
 ### Week 9 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Distinguished metrics, logs, events, monitoring, and auditing.
+* Understood the basic capabilities of Amazon CloudWatch.
+* Understood how CloudTrail records AWS API activities.
+* Created or interpreted a basic monitoring alarm.
+* Understood AWS Budgets, Cost Explorer, tagging, and basic cost-control practices.

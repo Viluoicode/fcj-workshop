@@ -1,57 +1,32 @@
 ---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-09-06
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 10 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand synchronous and asynchronous communication.
+* Learn the roles of Amazon SNS and Amazon SQS.
+* Understand how queues and topics help decouple applications.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn application-integration fundamentals: synchronous, asynchronous, tightly coupled, and loosely coupled communication | 31/08/2026 | 31/08/2026 | <https://aws.amazon.com/application-integration/> |
+| Tue | - Learn Amazon SQS concepts: queues, messages, producers, consumers, visibility timeout, retention period, and dead-letter queues | 01/09/2026 | 01/09/2026 | <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html> |
+| Wed | - Compare SQS Standard and FIFO queues <br> - Learn message ordering, deduplication, and common use cases | 02/09/2026 | 02/09/2026 | <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html> |
+| Thu | - Learn Amazon SNS concepts: topics, publishers, subscribers, message filtering, and fan-out architecture | 03/09/2026 | 03/09/2026 | <https://docs.aws.amazon.com/sns/latest/dg/welcome.html> |
+| Fri | - Compare SNS and SQS <br> - Study how SNS and SQS can be combined to build a decoupled application | 04/09/2026 | 04/09/2026 | <https://docs.aws.amazon.com/sns/latest/dg/sns-common-scenarios.html> |
+| Sat | - Participate in **Day 01: GOVERN · Observe Before You Act** of the CloudThinker × FCAJ Prove It series as Team **HCM15 (Tyrex)** <br> - Learn how AI Agent access changes cloud security boundaries <br> - Design identity, least-privilege permissions, operating boundaries, and guardrails before granting access <br> - Use a read-only Agent to review an AWS demo account and record evidence-backed observations <br> - Complete the **Agentic Cloud Review** artifact and practise the **Agent Supervisor** skill | 05/09/2026 | 05/09/2026 | <https://docs.cloudthinker.io/learn/workshops/prove-it/day-03-prove-it-arena> |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Distinguished synchronous from asynchronous communication.
+* Understood the main components of Amazon SQS and Amazon SNS.
+* Distinguished Standard queues from FIFO queues.
+* Explained the publish/subscribe model.
+* Understood how SNS and SQS decouple application components.

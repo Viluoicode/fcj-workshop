@@ -1,59 +1,31 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-08-30
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu sự khác nhau giữa monitoring, logging và auditing.
+* Tìm hiểu vai trò nền tảng của Amazon CloudWatch và AWS CloudTrail.
+* Áp dụng các biện pháp quản lý tài nguyên và chi phí AWS cơ bản.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Học observability cơ bản: metric, log, event, dashboard và alarm <br> - Phân biệt monitoring với auditing | 24/08/2026 | 24/08/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-caf-operations-perspective/observability.html> |
+| 3 | - Tìm hiểu CloudWatch metric, namespace, dimension, dashboard và các metric EC2 tiêu chuẩn | 25/08/2026 | 25/08/2026 | <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html> |
+| 4 | - Tìm hiểu CloudWatch Logs và alarm <br> - Xem log group và cách alarm gửi thông báo khi vượt ngưỡng | 26/08/2026 | 26/08/2026 | <https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/AlarmThatSendsEmail.html> |
+| 5 | - Tìm hiểu AWS CloudTrail: event history, management event và cách hoạt động API được ghi lại để kiểm toán | 27/08/2026 | 27/08/2026 | <https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html> |
+| 6 | - Tìm hiểu AWS Budgets, Cost Explorer, resource tagging và cách xác định, loại bỏ tài nguyên không còn sử dụng | 28/08/2026 | 28/08/2026 | <https://docs.aws.amazon.com/cost-management/latest/userguide/what-is-costmanagement.html> |
 
-### Kết quả đạt được tuần 9:
+### Kết quả đạt được trong tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Phân biệt được metric, log, event, monitoring và auditing.
+* Hiểu các khả năng cơ bản của Amazon CloudWatch.
+* Hiểu cách CloudTrail ghi lại hoạt động AWS API.
+* Tạo hoặc đọc được một monitoring alarm cơ bản.
+* Hiểu AWS Budgets, Cost Explorer, tagging và các biện pháp kiểm soát chi phí cơ bản.

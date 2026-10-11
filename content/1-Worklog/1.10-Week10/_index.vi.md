@@ -1,59 +1,32 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-09-06
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu giao tiếp đồng bộ và bất đồng bộ.
+* Tìm hiểu vai trò của Amazon SNS và Amazon SQS.
+* Hiểu cách queue và topic giúp giảm sự phụ thuộc giữa các thành phần ứng dụng.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Học kiến thức tích hợp ứng dụng: giao tiếp đồng bộ, bất đồng bộ, tightly coupled và loosely coupled | 31/08/2026 | 31/08/2026 | <https://aws.amazon.com/application-integration/> |
+| 3 | - Tìm hiểu Amazon SQS: queue, message, producer, consumer, visibility timeout, retention period và dead-letter queue | 01/09/2026 | 01/09/2026 | <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html> |
+| 4 | - So sánh SQS Standard với FIFO <br> - Tìm hiểu thứ tự message, deduplication và các trường hợp sử dụng phổ biến | 02/09/2026 | 02/09/2026 | <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html> |
+| 5 | - Tìm hiểu Amazon SNS: topic, publisher, subscriber, message filtering và kiến trúc fan-out | 03/09/2026 | 03/09/2026 | <https://docs.aws.amazon.com/sns/latest/dg/welcome.html> |
+| 6 | - So sánh SNS với SQS <br> - Tìm hiểu cách kết hợp SNS và SQS để xây dựng ứng dụng loosely coupled | 04/09/2026 | 04/09/2026 | <https://docs.aws.amazon.com/sns/latest/dg/sns-common-scenarios.html> |
+| 7 | - Tham gia **Day 01: GOVERN · Observe Before You Act** thuộc chuỗi CloudThinker × FCAJ Prove It cùng Team **HCM15 (Tyrex)** <br> - Tìm hiểu sự thay đổi của ranh giới bảo mật khi AI Agent được cấp quyền truy cập cloud environment <br> - Thiết kế identity, permission theo nguyên tắc least privilege, operating boundaries và guardrails trước khi cấp quyền <br> - Sử dụng Agent có quyền read-only để review AWS demo account và ghi lại các nhận định dựa trên evidence <br> - Hoàn thành artifact **Agentic Cloud Review** và thực hành kỹ năng **Agent Supervisor** | 05/09/2026 | 05/09/2026 | <https://docs.cloudthinker.io/learn/workshops/prove-it/day-03-prove-it-arena> |
 
-### Kết quả đạt được tuần 10:
+### Kết quả đạt được trong tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Phân biệt được giao tiếp đồng bộ và bất đồng bộ.
+* Hiểu các thành phần chính của Amazon SQS và Amazon SNS.
+* Phân biệt được Standard queue và FIFO queue.
+* Giải thích được mô hình publish/subscribe.
+* Hiểu cách SNS và SQS giảm sự phụ thuộc giữa các thành phần ứng dụng.

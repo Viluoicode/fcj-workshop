@@ -1,57 +1,31 @@
 ---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-08-02
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Understand object storage and the core concepts of Amazon S3.
+* Learn basic S3 security, versioning, lifecycle, and storage classes.
+* Install and use the AWS CLI for basic account and S3 operations.
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| Mon | - Learn object storage and Amazon S3 concepts: buckets, objects, keys, prefixes, and Regions | 27/07/2026 | 27/07/2026 | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html> |
+| Tue | - Learn S3 permissions, Block Public Access, bucket policies, IAM policies, and basic encryption options | 28/07/2026 | 28/07/2026 | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/security-best-practices.html> |
+| Wed | - Learn S3 versioning, storage classes, lifecycle rules, and common S3 use cases | 29/07/2026 | 29/07/2026 | <https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html> |
+| Thu | - Install and configure the AWS CLI <br> - Learn credentials, profiles, default Region, and output formats | 30/07/2026 | 30/07/2026 | <https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html> |
+| Fri | - Practise basic CLI commands: `aws sts get-caller-identity`, `aws configure list`, `aws s3 ls`, `aws s3 cp`, and `aws s3 sync` | 31/07/2026 | 31/07/2026 | <https://docs.aws.amazon.com/cli/latest/reference/s3/> |
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Understood the structure and common use cases of Amazon S3.
+* Distinguished buckets, objects, keys, and prefixes.
+* Understood basic S3 access-control and data-protection mechanisms.
+* Installed and configured the AWS CLI.
+* Used the CLI to inspect account information and perform basic S3 operations.
