@@ -16,7 +16,7 @@ pre: " <b> 1.3. </b> "
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Mon |  | 13/07/2026 | 13/07/2026 | |
+| Mon | - Visit the office and review two recordings of previous events on the **AWS Study Group** YouTube channel <br> - Re-read and consolidate the learning materials shared on Notion | 13/07/2026 | 13/07/2026 | |
 | Tue | - Learn IAM fundamentals: authentication, authorization, IAM users, and user groups | 14/07/2026 | 14/07/2026 | <https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html> |
 | Wed | - Learn IAM policies and the basic structure of a JSON policy: Effect, Action, Resource, and Condition | 15/07/2026 | 15/07/2026 | <https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html> |
 | Thu | - Learn IAM roles and temporary credentials <br> - Distinguish an IAM user from an IAM role | 16/07/2026 | 16/07/2026 | <https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html> |
@@ -24,6 +24,8 @@ pre: " <b> 1.3. </b> "
 
 ### Week 3 Achievements:
 
+* Reviewed knowledge shared in two previous event recordings and consolidated the main learning points.
+* Revisited the Notion learning materials and organized the knowledge needed for the following AWS IAM topics.
 * Distinguished IAM users, groups, roles, and policies.
 * Understood authentication and authorization in AWS.
 * Read and explained a basic IAM policy.

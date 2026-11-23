@@ -30,3 +30,6 @@ pre: " <b> 1.12. </b> "
 * Understood how Amazon ECR stores container images.
 * Identified the main components of Amazon ECS.
 * Distinguished ECS on EC2 from ECS on Fargate.
+* Completed the Investigation Dossier and Final Defence during Prove It Day 03 and developed the Agentic Cloud Operator skill.
+* Identified improvements needed in team role assignment, time management, evidence verification, and technical defence after the Day 03 result fell below expectations.
+* Completed all three Prove It sessions; based on the combined performance across the series, Team HCM15 (Tyrex) received the award **“Most Impressive Submission from Ho Chi Minh City.”**

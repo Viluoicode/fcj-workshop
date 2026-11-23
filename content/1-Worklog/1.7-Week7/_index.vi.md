@@ -16,7 +16,7 @@ pre: " <b> 1.7. </b> "
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 |  | 10/08/2026 | 10/08/2026 | |
+| 2 | - Lên văn phòng, kết nối với các bạn thực tập sinh và trao đổi tiến độ, kế hoạch học tập trong tuần <br> - Đọc tài liệu giới thiệu về kiến trúc cơ sở dữ liệu quan hệ và NoSQL <br> - Tìm hiểu vai trò của Amazon RDS, Amazon DynamoDB và sự khác nhau cơ bản giữa các trường hợp sử dụng <br> - Xem kiến trúc kết nối ứng dụng với database thông qua VPC, DB subnet group, Security Group và database endpoint <br> - Hệ thống ghi chú và chuẩn bị câu hỏi cho các nội dung RDS, DynamoDB ở những ngày tiếp theo | 10/08/2026 | 10/08/2026 | <https://aws.amazon.com/what-is/database/> |
 | 3 | - Ôn kiến thức cơ sở dữ liệu: table, row, column, primary key, relationship, index và các thao tác SQL cơ bản | 11/08/2026 | 11/08/2026 | <https://aws.amazon.com/what-is/database/> |
 | 4 | - Tìm hiểu Amazon RDS: database engine, DB instance, storage, backup, snapshot, Multi-AZ và Read Replica | 12/08/2026 | 12/08/2026 | <https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html> |
 | 5 | - Tìm hiểu cách ứng dụng kết nối an toàn với RDS thông qua VPC, subnet group, Security Group, credentials và database port | 13/08/2026 | 13/08/2026 | <https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSSecurityGroups.html> |
@@ -24,6 +24,8 @@ pre: " <b> 1.7. </b> "
 
 ### Kết quả đạt được trong tuần 7:
 
+* Kết nối với các bạn thực tập sinh và trao đổi kế hoạch học tập cho tuần tìm hiểu database.
+* Đọc trước tài liệu, nắm kiến trúc nền cần thiết trước khi tìm hiểu chi tiết Amazon RDS và DynamoDB.
 * Phân biệt được cơ sở dữ liệu quan hệ và NoSQL.
 * Hiểu các thành phần chính của Amazon RDS.
 * Giải thích được vai trò của backup, snapshot, Multi-AZ và Read Replica.

@@ -18,15 +18,19 @@ pre: " <b> 1.11. </b> "
 | --- | --- | --- | --- | --- |
 | Mon | - Learn API fundamentals: client/server, HTTP methods, endpoint, request, response, headers, status codes, and JSON | 07/09/2026 | 07/09/2026 | <https://aws.amazon.com/what-is/api/> |
 | Tue | - Learn Amazon API Gateway: REST API, HTTP API, routes, methods, stages, deployment, and Lambda integration | 08/09/2026 | 08/09/2026 | <https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html> |
-| Wed |  | 09/09/2026 | 09/09/2026 | |
+| Wed | - Visit the office and connect with other interns to discuss serverless application architecture <br> - Review the API Gateway documentation and the request flow from a client through API Gateway to Lambda <br> - Read about API routes, methods, stages, deployment, authorization, throttling, CORS, and CloudWatch logging <br> - Review the role of EventBridge in routing events to targets and compare it with SNS and SQS <br> - Organize architecture notes and prepare questions for the API security and EventBridge topics of the following days | 09/09/2026 | 09/09/2026 | <https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html> |
 | Thu | - Learn basic API protection: IAM authorization, API keys, throttling, CORS, input validation, and CloudWatch logging | 10/09/2026 | 10/09/2026 | <https://docs.aws.amazon.com/apigateway/latest/developerguide/security.html> |
 | Fri | - Learn Amazon EventBridge: event buses, events, rules, targets, and schedules <br> - Distinguish EventBridge, SNS, and SQS | 11/09/2026 | 11/09/2026 | <https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-what-is.html> |
-| Sat | - Participate in **Day 02: INVESTIGATE · From Signal to Root Cause** with Team **HCM15 (Tyrex)** <br> - Investigate an intentionally misconfigured cloud environment and challenge the Agent's initial answer <br> - Develop competing hypotheses, verify claims with evidence, and trace conclusions to their sources <br> - Build an Evidence Table and Causal Graph, then consolidate the findings into an **Incident Report** <br> - Practise the **Agentic Incident Investigator** skill and achieve a score of **93.6/100** | 12/09/2026 | 12/09/2026 | <https://docs.cloudthinker.io/learn/workshops/prove-it/day-03-prove-it-arena> |
+| Sat | - Participate in **Day 02: INVESTIGATE · From Signal to Root Cause** with Team **HCM15 (Tyrex)** <br> - Investigate an intentionally misconfigured cloud environment and challenge the Agent's initial answer <br> - Develop competing hypotheses, verify claims with evidence, and trace conclusions to their sources <br> - Build an Evidence Table and Causal Graph, then consolidate the findings into an **Incident Report** <br> - Practise the **Agentic Incident Investigator** skill and achieve a score of **93.6/100** | 12/09/2026 | 12/09/2026 | <https://docs.cloudthinker.io/learn/workshops/prove-it/day-02-investigate> |
 
 ### Week 11 Achievements:
 
+* Connected with other interns and discussed the components of a basic serverless application architecture.
+* Reviewed the API Gateway request flow and EventBridge architecture before continuing with security and integration topics.
 * Understood basic HTTP and API concepts.
 * Identified the main components of API Gateway.
 * Explained how API Gateway integrates with Lambda.
 * Understood basic API protection and monitoring.
 * Distinguished EventBridge, SNS, and SQS use cases.
+* Completed an Evidence Table, Causal Graph, and Incident Report by testing competing hypotheses and tracing conclusions to their evidence sources.
+* Developed the Agentic Incident Investigator skill and achieved **93.6/100** for the Day 02 submission.

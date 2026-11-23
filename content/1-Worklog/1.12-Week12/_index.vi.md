@@ -30,3 +30,6 @@ pre: " <b> 1.12. </b> "
 * Hiểu cách Amazon ECR lưu trữ container image.
 * Nhận biết được các thành phần chính của Amazon ECS.
 * Phân biệt được ECS on EC2 và ECS on Fargate.
+* Hoàn thành Investigation Dossier và Final Defence trong Prove It Day 03, đồng thời phát triển kỹ năng Agentic Cloud Operator.
+* Nhận ra các điểm cần cải thiện về phân chia vai trò, quản lý thời gian, kiểm chứng evidence và bảo vệ kỹ thuật sau khi kết quả Day 03 chưa đạt kỳ vọng.
+* Hoàn thành đủ ba ngày Prove It; dựa trên kết quả tổng hợp của toàn series, Team HCM15 (Tyrex) nhận giải **“Nhóm HCM có bài thi ấn tượng nhất.”**

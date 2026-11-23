@@ -8,24 +8,22 @@ pre: " <b> 1.13. </b> "
 
 ### Week 13 Objectives:
 
-* Understand Infrastructure as Code.
-* Learn the fundamental structure and workflow of AWS CloudFormation.
-* Consolidate the AWS services studied during the first three months.
+* Formalize Project 1 (prototype started in late June 2026, before the internship) by re-defining the job-market data problem and project scope.
+* Review Infrastructure as Code and select a repeatable deployment approach.
+* Design the initial AWS data-pipeline architecture.
 
-### Tasks to be carried out this week:
+### Tasks completed this week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| Mon | - Learn Infrastructure as Code <br> - Compare repeatable templates with manually creating resources in the AWS Console | 21/09/2026 | 21/09/2026 | <https://aws.amazon.com/what-is/iac/> |
-| Tue |  | 22/09/2026 | 22/09/2026 | |
-| Wed | - Learn CloudFormation fundamentals: template, resource, parameter, output, mapping, stack, and change set | 23/09/2026 | 23/09/2026 | <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/Welcome.html> |
-| Thu | - Learn the CloudFormation workflow: validate, create, update, detect failures, roll back, and delete a stack | 24/09/2026 | 24/09/2026 | <https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacks.html> |
-| Fri | - Review the first three months <br> - Design a basic AWS architecture connecting VPC, EC2 or Lambda, S3, a database, monitoring, and IAM | 25/09/2026 | 25/09/2026 | <https://docs.aws.amazon.com/wellarchitected/latest/framework/welcome.html> |
+| Mon | - Review Infrastructure as Code and compare repeatable templates with manual AWS Console provisioning | 21/09/2026 | 21/09/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html> |
+| Tue | - Visit the office, connect with other interns, review the project direction, and read documentation about AWS data-pipeline architectures | 22/09/2026 | 22/09/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html> |
+| Wed | - Analyze the four public API platforms (Greenhouse, Lever, Ashby, and Arbeitnow) and identify schema differences | 23/09/2026 | 23/09/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html> |
+| Thu | - Define project requirements: daily ingestion, traceability, freshness, lifecycle, data quality, analytics, and monitoring | 24/09/2026 | 24/09/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html> |
+| Fri | - Draft the Bronze-Silver-Gold architecture and map AWS services to each responsibility | 25/09/2026 | 25/09/2026 | <https://docs.aws.amazon.com/whitepapers/latest/aws-overview/introduction.html> |
 
 ### Week 13 Achievements:
 
-* Explained the benefits of Infrastructure as Code.
-* Understood the main sections of a CloudFormation template.
-* Understood the CloudFormation stack lifecycle.
-* Connected the AWS services studied during the first three months into a basic architecture.
-* Established the foundational knowledge required for the project phase.
+* Defined the problem, scope, target users, and acceptance criteria for Project 1.
+* Selected a serverless batch architecture using S3, Glue, Step Functions, Athena, and supporting AWS services.
+* Prepared the initial project architecture and implementation phases.

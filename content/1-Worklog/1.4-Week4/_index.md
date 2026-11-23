@@ -18,12 +18,14 @@ pre: " <b> 1.4. </b> "
 | --- | --- | --- | --- | --- |
 | Mon | - Learn EC2 fundamentals: instances, instance families, vCPU, memory, and common compute use cases | 20/07/2026 | 20/07/2026 | <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html> |
 | Tue | - Learn Amazon Machine Images, instance lifecycle, user data, and the basic EC2 launch process | 21/07/2026 | 21/07/2026 | <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html> |
-| Wed |  | 22/07/2026 | 22/07/2026 | |
+| Wed | - Visit the office and connect with other interns from the same university <br> - Create a group together on the internship Portal to support communication and coordination <br> - Introduce ourselves, discuss the internship experience, and exchange initial learning plans <br> - Review the office rules and workplace guidelines together | 22/07/2026 | 22/07/2026 | |
 | Thu | - Learn Security Groups, key pairs, public/private IP addresses, Elastic IP addresses, and EC2 connection methods | 23/07/2026 | 23/07/2026 | <https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html> |
 | Fri | - Learn EBS fundamentals, volume types, snapshots, and the relationship between EC2 instances and EBS volumes | 24/07/2026 | 24/07/2026 | <https://docs.aws.amazon.com/ebs/latest/userguide/what-is-ebs.html> |
 
 ### Week 4 Achievements:
 
+* Connected with other interns from the same university and established a group on the Portal for future coordination.
+* Became more familiar with fellow interns through discussion and reviewed the office rules together.
 * Understood the purpose and core components of Amazon EC2.
 * Selected basic instance types according to workload requirements.
 * Understood AMIs and the EC2 instance lifecycle.

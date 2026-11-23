@@ -1,108 +1,128 @@
 ---
-title: "Bản đề xuất"
-date: 2024-01-01
+title: "Đề xuất dự án"
+date: 2026-11-16
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Đề xuất dự án - OnTime Radar (Shipment SLA Service)
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+## 1. Tóm tắt
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+OnTime Radar là dịch vụ serverless trên AWS dành cho các shop bán hàng online giao hàng qua nhiều hãng vận chuyển. Hệ thống nhận webhook trạng thái từ mọi hãng, biến chúng thành một dòng thời gian đáng tin cậy cho mỗi vận đơn, gửi email cảnh báo cho nhân viên khi đơn bắt đầu giao trễ, và báo cáo tỷ lệ giao đúng hạn theo hãng và khu vực. Dashboard web có đăng nhập cung cấp đúng thứ mà CSKH và quản lý mỗi người cần.
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Dự án chạy với lưu lượng thật. Một job chạy theo lịch phát lại khoảng 98.000 đơn hàng lịch sử của bộ dữ liệu thương mại điện tử công khai Olist dưới dạng webhook của hãng, mỗi 15 phút một lần, nên hệ thống được kiểm chứng với khối lượng sát thực tế chứ không chỉ vài request làm tay.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+Đây là dự án thứ hai trong kỳ thực tập. Dự án đầu tiên là Job Market AWS Pipeline (pipeline dữ liệu dạng batch), được giữ lại trong mục Workshop như một case study bổ sung.
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+## 2. Vấn đề
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Một shop online vừa và nhỏ ở Việt Nam thường dùng hai đến bốn hãng vận chuyển cùng lúc. Mỗi hãng có bộ mã trạng thái, trang tra cứu và định dạng webhook riêng. Shop phải trả giá cho điều này hằng ngày:
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+| Khó khăn | Hậu quả |
+|---|---|
+| Nhân viên phải xem nhiều trang của các hãng để theo dõi một đơn | trả lời khách chậm |
+| Đơn trễ chỉ được phát hiện khi khách phàn nàn | đánh giá xấu và hoàn hàng |
+| Không có số liệu đúng hạn theo hãng hay khu vực | chọn hãng theo cảm tính, không có gì để đàm phán |
+| Webhook đến hai lần hoặc sai thứ tự | trạng thái đơn nhảy lùi và nhân viên mất niềm tin vào hệ thống |
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+## 3. Mục tiêu và tiêu chí thành công
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+### Mục tiêu
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+1. Nhận webhook từ ba hãng (GHN, GHTK, J&T; định dạng mô phỏng) và quy về một bộ tám trạng thái chung.
+2. Xử lý sự kiện của từng vận đơn theo đúng thứ tự, bỏ qua bản trùng và từ chối thay đổi trạng thái vô lý.
+3. Trả về toàn bộ dòng thời gian của một vận đơn trong một lần gọi API.
+4. Phát hiện tỷ lệ giao trễ tăng cao và gửi email cho đội vận hành.
+5. Báo cáo tỷ lệ đúng hạn theo hãng, khu vực và tuần.
+6. Cung cấp dashboard web với hai vai trò: CSKH và quản lý.
+7. Triển khai mọi thứ bằng code, tự động, không dùng access key dài hạn.
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+### Tiêu chí thành công
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+| Tiêu chí | Cách kiểm chứng |
+|---|---|
+| Trạng thái cuối không sai khi sự kiện bị trùng hoặc xáo trộn | Kiểm thử chaos trên API đã deploy: 0 sai lệch so với bộ đáp án độc lập |
+| Không mất sự kiện | Replayer `Failed = 0`; dead-letter queue trống |
+| Sự cố giao trễ đến được người phụ trách mà không cần ai ngồi canh màn hình | Alarm → email SNS, đã thử bằng script demo |
+| Tài khoản CSKH không xem được báo cáo quản lý | Kiểm tra ma trận quyền 401/403 trên API thật |
+| Chạy báo cáo tốn ít chi phí | Giới hạn 1 GB mỗi truy vấn Athena; đo tỷ lệ dùng cache |
+| Hệ thống dựng lại và gỡ bỏ được từ code | Một SAM template; có hướng dẫn dọn dẹp |
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+## 4. Kiến trúc đề xuất
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+![Kiến trúc OnTime Radar: webhook qua API Gateway, SQS FIFO, Lambda processor, DynamoDB và S3; dashboard trên CloudFront với Cognito; báo cáo Athena; cảnh báo CloudWatch và SNS; GitHub Actions deploy qua OIDC](../../images/5-Workshop/5.1-OnTimeRadar/architecture.png)
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+Hệ thống có ba luồng:
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+- **Sự kiện vào:** webhook của hãng → API Gateway → adapter trên Lambda → SQS FIFO (mỗi vận đơn một nhóm) → Lambda processor → DynamoDB (trạng thái + lịch sử trong một transaction) và event lake trên S3.
+- **Dashboard cho nhân viên:** trình duyệt → CloudFront → website trên S3 private; đăng nhập bằng Cognito; API Gateway kiểm tra token; tra cứu đọc DynamoDB, còn báo cáo chạy bằng Athena trên event lake.
+- **Cảnh báo:** metric từ processor → CloudWatch alarm theo tỷ lệ trễ và theo dead-letter queue → email SNS.
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+Triển khai: GitHub Actions chạy test, chờ tôi duyệt, nhận role tạm thời qua OIDC rồi chạy `sam deploy`.
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+## 5. Dịch vụ AWS và lý do lựa chọn
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+| Dịch vụ | Vai trò trong hệ thống | Vì sao chọn |
+|---|---|---|
+| Amazon API Gateway (HTTP API) | cổng vào cho webhook và dashboard | kiểm tra JWT, giới hạn tốc độ, CORS mà không cần server |
+| AWS Lambda (.NET 10, arm64) | adapter, processor, replayer | trả tiền theo lượt dùng; arm64 rẻ hơn khoảng 20% |
+| Amazon SQS FIFO + DLQ | giữ đúng thứ tự sự kiện của từng vận đơn | thứ tự theo message group, các nhóm chạy song song |
+| Amazon DynamoDB (on-demand) | trạng thái hiện tại và lịch sử | transaction và ghi có điều kiện để đảm bảo idempotent |
+| Amazon S3 | event lake, bộ dữ liệu, file website | rẻ và bền |
+| AWS Glue Data Catalog + Amazon Athena | báo cáo SLA bằng SQL | không cần database server; partition projection nên không cần crawler |
+| Amazon EventBridge Scheduler | chạy replayer mỗi 15 phút | lịch chạy được quản lý sẵn, đơn giản |
+| Amazon Cognito | đăng nhập và phân quyền nhân viên | đăng nhập được quản lý sẵn, có nhóm, MFA tùy chọn |
+| Amazon CloudFront | phục vụ dashboard qua HTTPS | giữ bucket private bằng OAC, thêm header bảo mật |
+| Amazon CloudWatch + Amazon SNS | metric, log, alarm, email | có sẵn và rẻ ở quy mô này |
+| AWS IAM + AWS SAM / CloudFormation | phân quyền và hạ tầng dưới dạng code | quyền tối thiểu, permissions boundary, deploy lặp lại được |
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+## 6. Bảo mật và vận hành
+
+- Nhân viên đăng nhập qua Cognito (authorization code + PKCE). Gateway từ chối token sai (401), còn Lambda từ chối sai vai trò (403).
+- Hãng vận chuyển xác thực bằng webhook secret. Đầu vào được kiểm tra, đầu vào sai nhận 400.
+- Bucket website là private, CloudFront thêm HSTS, CSP và các header bảo mật khác, và CORS chỉ cho phép request GET từ chính domain của dashboard.
+- Mọi role đều gắn permissions boundary. Việc deploy dùng OIDC có bước duyệt, không lưu access key ở bất cứ đâu.
+- Giới hạn API 10 request mỗi giây cho mỗi route để bảo vệ số Lambda chạy đồng thời của tài khoản.
+- Một script kiểm tra sức khỏe hằng ngày và hai alarm bao quát replayer, hàng đợi, các Lambda, event lake, API và website.
+
+## 7. Tiến độ
+
+Dự án bắt đầu ngày 16/11/2026 (Tuần 21). Hạn nộp Workshop là trước ngày 16/12.
+
+| Tuần | Thời gian | Công việc | Trạng thái |
+|---|---|---|---|
+| 21 | 16/11 – 22/11 | Webhook, xử lý FIFO, DynamoDB, event lake S3, replayer, báo cáo Athena, Cognito, dashboard trên CloudFront, alarm, CI/CD qua OIDC, sửa các điểm từ review bảo mật | Đã xong |
+| 22 | 23/11 – 27/11 | Kiểm thử chaos trên API đã deploy, ghi nhận giới hạn đã biết, thu thập bằng chứng | Đang làm |
+| 23 | 30/11 – 04/12 | Báo cáo chi phí (Cost Explorer + Pricing Calculator), video demo | Dự kiến |
+| 24 | 07/12 – 11/12 | Rà soát Workshop lần cuối, báo cáo và nộp bài | Dự kiến |
+
+## 8. Ngân sách
+
+Với replayer gửi khoảng 1.900 đơn (khoảng 9.000 sự kiện) mỗi ngày, ước tính ban đầu là **3–5 USD mỗi tháng**, chủ yếu là lượt ghi DynamoDB. Thiết kế giữ chi phí thấp nhờ dịch vụ serverless trên arm64, DynamoDB on-demand, không VPC hay NAT gateway, giới hạn 1 GB mỗi truy vấn Athena, cache báo cáo hai lớp và giữ log 14 ngày.
+
+Đây là ước tính, không phải hóa đơn. Báo cáo cuối sẽ có số liệu đo được từ Cost Explorer và bản ước tính AWS Pricing Calculator đã lưu dựa trên số liệu đó.
+
+## 9. Rủi ro và cách giảm thiểu
+
+| Rủi ro | Cách giảm thiểu |
+|---|---|
+| Webhook trùng hoặc sai thứ tự | FIFO theo vận đơn, event ID cố định, kiểm tra version và quy tắc trạng thái |
+| Một message lỗi liên tục | Partial batch failure; sau 5 lần lỗi chuyển sang DLQ và bật alarm |
+| Đợt dồn tải chiếm hết Lambda (10 với tài khoản mới) | Giới hạn tốc độ API và giới hạn số luồng của processor; dự kiến xin nâng quota |
+| Báo động quá nhiều | Alarm theo *tỷ lệ* trễ kéo dài, không theo số đếm thô |
+| Lộ thông tin dùng để deploy | Không lưu key; OIDC gắn với ID của repository và environment đã duyệt; permissions boundary |
+| Truy vấn chạy mất kiểm soát tốn tiền | Workgroup Athena giới hạn 1 GB mỗi truy vấn |
+| Số liệu gây hiểu nhầm | Loại vận đơn demo và kiểm thử; ghi rõ giới hạn của các trường giả lập và dữ liệu Brazil |
+| Code do AI tạo ra bị sai | Review code, hơn 200 test tự động có mutation test, và kiểm thử chaos trên hệ thống thật |
+
+## 10. Sản phẩm bàn giao
+
+- Mã nguồn, SAM template và workflow CI/CD trong repository `ontime-radar`.
+- Sơ đồ kiến trúc (draw.io, icon AWS).
+- Hệ thống đang chạy với dashboard web, alarm và phát lại dữ liệu hằng ngày.
+- Workshop song ngữ gồm các bước triển khai, kiểm thử, chi phí và dọn dẹp.
+- Bằng chứng: kết quả daily-check, báo cáo kiểm thử chaos và ảnh chụp màn hình.
+- Video demo *(đang làm)*.
+- Báo cáo chi phí *(đang làm)*.
