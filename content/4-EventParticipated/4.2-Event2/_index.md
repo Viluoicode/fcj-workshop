@@ -1,12 +1,12 @@
 ---
-title: "AWS for Software and Technology Companies Day"
+title: "AWS for Software & Financial Services Companies Day"
 date: 2026-10-08
 weight: 1
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# AWS for Software and Technology Companies Day
+# AWS for Software & Financial Services Companies Day
 
 ## Event Information
 
