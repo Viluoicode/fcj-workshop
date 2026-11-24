@@ -19,7 +19,9 @@ pre: " <b> 1.18. </b> "
 | Wed | - Review the dashboard reader role and its limits (published Gold data, metadata, Athena, Catalog, results, pipeline lock) | 28/10/2026 | 28/10/2026 | <https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html> |
 | Thu | - Review the dashboard checks before and after Athena reads (stale, in-progress, or changed publication) | 29/10/2026 | 29/10/2026 | <https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html> |
 | Fri | - *(to be filled)* | 30/10/2026 | 30/10/2026 | |
+| Sat | - Attend First Cloud AI Journey: Community Day at Bitexco Financial Tower: six sessions on an AWS learning roadmap, AI-driven software delivery, a serverless game built during an internship, Lambda Web Adapter, asynchronous processing with SQS, and open-source contribution to AWS CDK | 31/10/2026 | 31/10/2026 | <https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/welcome.html> |
 
 ### Week 18 Achievements:
 
+* Attended Community Day and noted SQS practices (visibility timeout, DLQ, idempotent consumers) to apply in my own projects.
 * Verified how monitoring and the dashboard reader detect stale or inconsistent publication.

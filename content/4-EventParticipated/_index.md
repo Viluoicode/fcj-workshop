@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4. </b> "
 ---
 
-During the internship I took part in two AWS events: a three-session, hands-on investigation series at the AWS office, and a one-day conference that ended with a hands-on workshop on AI agents. Each event page records what was presented, what I practised, what I learned, and photos from the day.
+During the internship I took part in three AWS events: a three-session, hands-on investigation series at the AWS office, a one-day conference that ended with a hands-on workshop on AI agents, and a community day where industry engineers and fellow interns shared their experience. Each event page records what was presented, what I practised, what I learned, and photos from the day.
 
 ### [Event 1](4.1-Event1/)  
 &emsp;**Event Name:** Prove It: Agentic Cloud Investigation Series
@@ -27,3 +27,14 @@ During the internship I took part in two AWS events: a three-session, hands-on i
 &emsp;**Location:** Sheraton Saigon Grand Opera, Ho Chi Minh City
 
 &emsp;**Role:** Attendee; Track B workshop participant (AI agents on Amazon Bedrock AgentCore with Kiro)
+
+---
+
+### [Event 3](4.3-Event3/)  
+&emsp;**Event Name:** First Cloud AI Journey: Community Day
+
+&emsp;**Date:** Saturday, October 31, 2026
+
+&emsp;**Location:** Bitexco Financial Tower, Ho Chi Minh City
+
+&emsp;**Role:** Attendee
