@@ -169,13 +169,6 @@ Sau sự kiện, tôi xác định một số nội dung cần thực hành thê
 
 ## Hình ảnh sự kiện
 
-<!-- Thêm ảnh vào thư mục Image/Event 3 rồi bỏ comment các dòng dưới -->
-<!--
-![Check-in tại sự kiện First Cloud AI Journey Community Day](../../../Image/Event%203/checkin.jpg)
+![Ảnh check-in cùng các bạn thực tập sinh mặc áo First Cloud AI Journey, đeo thẻ khách, trong hội trường tại Bitexco Financial Tower](../../../Image/event%203/checkin.jpg)
 
-*Check-in tại Community Day ngày 31/10/2026.*
-
-![Diễn giả trình bày tại sự kiện](../../../Image/Event%203/session.jpg)
-
-*Một phiên chia sẻ trong buổi sáng.*
--->
+*Check-in cùng các bạn thực tập sinh FCAJ tại Community Day ngày 31/10/2026.*

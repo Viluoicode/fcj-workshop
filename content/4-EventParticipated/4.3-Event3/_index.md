@@ -169,13 +169,6 @@ After the event, I identified several items to practise: trying Lambda Web Adapt
 
 ## Event Photos
 
-<!-- Add photos to the Image/Event 3 folder, then uncomment the lines below -->
-<!--
-![Check-in at First Cloud AI Journey Community Day](../../Image/Event%203/checkin.jpg)
+![Check-in selfie with fellow interns in First Cloud AI Journey shirts and visitor passes, in the event hall at Bitexco Financial Tower](../../Image/event%203/checkin.jpg)
 
-*Check-in at Community Day on October 31, 2026.*
-
-![A speaker presenting at the event](../../Image/Event%203/session.jpg)
-
-*One of the morning sessions.*
--->
+*Check-in with fellow FCAJ interns at Community Day on October 31, 2026.*
