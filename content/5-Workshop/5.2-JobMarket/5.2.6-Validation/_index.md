@@ -28,7 +28,13 @@ It never falls back to "the newest date in the table". Stale or half-published d
 - A table of postings with links to the original job page.
 - Publication time, data age, board coverage, the Athena query ID, and the bytes scanned.
 
-> 📷 *Screenshots to add: the dashboard overview and the postings table (the repository already has `dashboard-overview.png` and `dashboard-postings.png` from 21 November).*
+![Dashboard overview for the snapshot of 21 November 2026: publication status, coverage note, filters, four KPIs, postings by role family, and top companies](../../../images/5-Workshop/5.2-JobMarket/dashboard-overview.png)
+
+*Overview of the published snapshot of 21 November 2026.*
+
+![Postings table filtered by the search term data engineer, with company, location, source, work mode, last observed time, and a link to each original posting](../../../images/5-Workshop/5.2-JobMarket/dashboard-postings.png)
+
+*Postings table with links to the original job pages.*
 
 ## Opening It Locally
 

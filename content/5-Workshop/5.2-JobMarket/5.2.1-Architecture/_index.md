@@ -8,7 +8,9 @@ pre: " <b> 5.2.1. </b> "
 
 # Architecture and Design
 
-> 📷 *Diagram to add: export the draw.io file to `static/images/5-Workshop/architecture.png` and embed it here. The diagram must show what is deployed today: Iceberg Gold, no crawler, and the lock-janitor Lambda.*
+![Job Market AWS Pipeline architecture: EventBridge starts Step Functions, which holds a DynamoDB lock and runs Glue ingestion, Bronze to Silver, and Silver to Gold; Gold is stored as Iceberg tables and queried by Athena; a health-monitor Lambda and CloudWatch alarms notify through SNS; a lock-janitor Lambda frees orphaned locks](../../../images/5-Workshop/5.2-JobMarket/architecture.png)
+
+*Architecture as deployed after 23 November 2026, drawn in draw.io with AWS icons. Source: `docs/diagrams/architecture.drawio` in the repository.*
 
 ## How a Run Flows
 

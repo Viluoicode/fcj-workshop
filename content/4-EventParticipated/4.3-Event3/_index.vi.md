@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 4.3. </b> "
 ---
 
-# First Cloud AI Journey: Community Day
 
 ## Thông tin sự kiện
 

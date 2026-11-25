@@ -12,7 +12,21 @@ pre: " <b> 5.2.7. </b> "
 
 Dự án sử dụng batch processing hằng ngày, serverless query, Glue worker nhỏ, stage timeout, retention rule, Athena scan limit và monthly budget alert.
 
-Ước tính minh họa khoảng 13,88 USD mỗi tháng theo các giả định đã ghi. Đây không phải hóa đơn thực tế hoặc báo giá chính thức cho Singapore region. Báo cáo cuối vẫn cần AWS Pricing Calculator estimate được lưu dựa trên job duration đã quan sát.
+### Chi phí đo được
+
+`scripts/run_metrics.py` đã đo 7 lượt chạy theo lịch trong ngày 14–20/11/2026 và đối chiếu với Cost Explorer. Đây là giá niêm yết trước khi trừ credit:
+
+| Hạng mục | Mỗi lượt (trung vị) |
+|---|---:|
+| Glue job (3 job, 517 DPU-giây) | 0,064 USD (Cost Explorer: 0,0635 USD) |
+| Glue crawler | 0,049 USD |
+| **Tổng Glue** | **khoảng 0,11 USD** |
+| Lambda, Step Functions, EventBridge, 6 alarm | nằm trong free tier |
+| S3, DynamoDB | vài cent mỗi ngày |
+
+Với một lượt mỗi ngày, chi phí Glue khoảng **3,4 USD mỗi tháng**. Các lượt này được đo trước khi thêm lấy dữ liệu song song và Iceberg. Thay đổi đó đã bỏ crawler, vốn chiếm khoảng 44% chi phí Glue mỗi lượt, nên chi phí hiện tại khoảng 2 USD mỗi tháng. Con số thấp hơn này là ước tính cho tới khi đo lại một tuần đầy đủ.
+
+*(Cần bổ sung: link tới bản ước tính AWS Pricing Calculator đã lưu, dựa trên các số liệu này.)*
 
 Budget alert chỉ thông báo và không tự dừng chi phí.
 
@@ -59,8 +73,7 @@ AI hỗ trợ tăng tốc nghiên cứu, triển khai, review và tài liệu, n
 
 ## Các phần còn lại trước khi nộp
 
-- Sơ đồ kiến trúc bằng AWS icons và editable source.
-- Screenshot cho các bước deployment và validation chính.
+- Screenshot cho các bước deployment và validation chính (sơ đồ kiến trúc và ảnh dashboard đã xong).
 - AWS Pricing Calculator estimate đã lưu.
 - Ví dụ troubleshooting cá nhân và chi tiết đóng góp đã xác nhận.
 - Kiểm tra cuối caption ảnh và thuật ngữ song ngữ.

@@ -24,8 +24,8 @@ pre: " <b> 1.2. </b> "
 
 ### Kết quả đạt được trong tuần 2:
 
-* Giải thích được sự khác nhau giữa môi trường on-premises và cloud.
+* Hiểu sự khác nhau giữa môi trường on-premises và cloud.
 * Hiểu vai trò của AWS Region và Availability Zone.
-* Nhận biết được các nhóm dịch vụ chính của AWS.
+* Hiểu các nhóm dịch vụ chính của AWS ở mức tổng quan.
 * Hiểu mô hình trách nhiệm chia sẻ.
 * Làm quen với AWS Console, Free Tier, Billing và bảo vệ tài khoản cơ bản.

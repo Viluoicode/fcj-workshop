@@ -26,8 +26,8 @@ pre: " <b> 1.8. </b> "
 
 * Kết nối với các bạn thực tập sinh và trao đổi sự khác nhau giữa compute chạy liên tục với mô hình serverless.
 * Đọc trước tài liệu AWS Lambda và event-driven architecture phục vụ các hoạt động học tập tiếp theo.
-* Giải thích được mô hình thực thi serverless.
-* Phân biệt được workload phù hợp với Lambda và EC2.
+* Hiểu mô hình thực thi serverless ở mức khái niệm.
+* Hiểu điểm khác nhau cơ bản giữa workload phù hợp với Lambda và với EC2.
 * Hiểu runtime, handler, execution role, timeout và environment variable của Lambda.
-* Nhận biết được các nguồn sự kiện Lambda phổ biến.
+* Hiểu các nguồn sự kiện phổ biến có thể kích hoạt Lambda.
 * Tạo và kiểm thử được một Lambda function cơ bản, đồng thời xem được log của function.

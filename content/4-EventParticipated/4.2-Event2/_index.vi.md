@@ -6,7 +6,7 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-# AWS for Software & Financial Services Companies Day
+
 
 ## Thông tin sự kiện
 

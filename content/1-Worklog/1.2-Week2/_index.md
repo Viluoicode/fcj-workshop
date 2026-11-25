@@ -24,8 +24,8 @@ pre: " <b> 1.2. </b> "
 
 ### Week 2 Achievements:
 
-* Explained the differences between on-premises and cloud environments.
+* Understood the differences between on-premises and cloud environments.
 * Understood the roles of AWS Regions and Availability Zones.
-* Identified the major AWS service categories.
+* Understood the major AWS service categories at an overview level.
 * Understood the shared responsibility model.
 * Became familiar with the AWS Console, Free Tier, Billing, and basic account protection.

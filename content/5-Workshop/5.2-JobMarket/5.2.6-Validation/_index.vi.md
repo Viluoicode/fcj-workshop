@@ -28,7 +28,13 @@ Dashboard không bao giờ lấy tạm "ngày mới nhất trong bảng". Dữ l
 - Bảng danh sách tin kèm link đến trang tuyển dụng gốc.
 - Thời điểm publish, tuổi dữ liệu, độ phủ board, Athena query ID và số byte đã quét.
 
-> 📷 *Ảnh cần bổ sung: màn hình tổng quan dashboard và bảng danh sách tin (repository đã có `dashboard-overview.png` và `dashboard-postings.png` chụp ngày 21/11).*
+![Tổng quan dashboard cho snapshot ngày 21/11/2026: trạng thái publish, ghi chú độ phủ, bộ lọc, bốn chỉ số chính, số tin theo nhóm vai trò và các công ty tuyển nhiều nhất](../../../../images/5-Workshop/5.2-JobMarket/dashboard-overview.png)
+
+*Tổng quan snapshot đã publish ngày 21/11/2026.*
+
+![Bảng tin tuyển dụng lọc theo từ khóa data engineer, gồm công ty, địa điểm, nguồn, hình thức làm việc, thời điểm thấy gần nhất và link tới tin gốc](../../../../images/5-Workshop/5.2-JobMarket/dashboard-postings.png)
+
+*Bảng tin tuyển dụng kèm link tới trang tuyển dụng gốc.*
 
 ## Mở dashboard trên máy
 

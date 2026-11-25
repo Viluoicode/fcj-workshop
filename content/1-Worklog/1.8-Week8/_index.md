@@ -26,8 +26,8 @@ pre: " <b> 1.8. </b> "
 
 * Connected with other interns and discussed the differences between continuously running compute and serverless execution.
 * Reviewed the AWS Lambda and event-driven architecture documentation needed for the following learning activities.
-* Explained the serverless execution model.
-* Distinguished Lambda workloads from EC2 workloads.
+* Understood the serverless execution model at a conceptual level.
+* Understood the basic difference between workloads suited to Lambda and to EC2.
 * Understood Lambda runtime, handler, execution role, timeout, and environment variables.
-* Identified common event sources for Lambda.
+* Understood the common event sources that can trigger Lambda.
 * Created and tested a basic Lambda function and inspected its logs.

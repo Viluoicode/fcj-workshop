@@ -8,7 +8,9 @@ pre: " <b> 5.2.1. </b> "
 
 # Kiến trúc và thiết kế
 
-> 📷 *Sơ đồ cần bổ sung: xuất file draw.io thành `static/images/5-Workshop/architecture.png` rồi nhúng vào đây. Sơ đồ phải khớp với hệ thống đang chạy: Gold dạng Iceberg, không còn crawler, có Lambda lock janitor.*
+![Kiến trúc Job Market AWS Pipeline: EventBridge khởi động Step Functions, giữ lock trong DynamoDB và chạy lần lượt Glue ingestion, Bronze sang Silver, Silver sang Gold; Gold lưu dạng bảng Iceberg và được Athena truy vấn; Lambda health monitor và CloudWatch alarm gửi thông báo qua SNS; Lambda lock janitor gỡ lock mồ côi](../../../../images/5-Workshop/5.2-JobMarket/architecture.png)
+
+*Kiến trúc đang chạy sau ngày 23/11/2026, vẽ bằng draw.io với icon AWS. File gốc: `docs/diagrams/architecture.drawio` trong repository.*
 
 ## Một lượt chạy diễn ra thế nào
 

@@ -17,19 +17,19 @@ pre: " <b> 1.12. </b> "
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
 | Mon | - Learn container fundamentals <br> - Compare containers with virtual machines | 14/09/2026 | 14/09/2026 | <https://aws.amazon.com/what-are-containers/> |
-| Tue | - Learn Docker concepts: image, container, Dockerfile, registry, port mapping, volume, and environment variable | 15/09/2026 | 15/09/2026 | <https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/> |
+| Tue | - Read about Docker concepts: image, container, Dockerfile, registry, port mapping, volume, and environment variable | 15/09/2026 | 15/09/2026 | <https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/> |
 | Wed | - Learn Amazon ECR: repositories, image tags, authentication, image push/pull, and image lifecycle policies | 16/09/2026 | 16/09/2026 | <https://docs.aws.amazon.com/AmazonECR/latest/userguide/what-is-ecr.html> |
-| Thu | - Learn Amazon ECS: cluster, task definition, task, service, container instance, and desired count | 17/09/2026 | 17/09/2026 | <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html> |
-| Fri | - Learn AWS Fargate and compare ECS on EC2 with ECS on Fargate <br> - Draw a basic containerized application architecture | 18/09/2026 | 18/09/2026 | <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html> |
+| Thu | - Read about the concepts of Amazon ECS: cluster, task definition, task, service, container instance, and desired count | 17/09/2026 | 17/09/2026 | <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html> |
+| Fri | - Learn AWS Fargate and compare ECS on EC2 with ECS on Fargate <br> - Sketch a basic container application diagram to check my own understanding | 18/09/2026 | 18/09/2026 | <https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html> |
 | Sat | - Compete in **Day 03: OPERATE · Prove It Arena** with Team **HCM15 (Tyrex)** <br> - Perform a rapid review of an unfamiliar cloud environment and respond to an incident inject under time pressure <br> - Divide team roles, build an Environment Map, test competing hypotheses, collect timestamped evidence, and construct a Causal Graph <br> - Complete the **Investigation Dossier** and Final Defence while practising the **Agentic Cloud Operator** skill <br> - The Day 03 result was below the team's expectations, highlighting improvements needed in role assignment, time management, evidence verification, and defence <br> - Based on the combined performance across all three days, receive the award **Most Impressive Submission from Ho Chi Minh City** | 19/09/2026 | 19/09/2026 | <https://docs.cloudthinker.io/learn/workshops/prove-it/day-03-prove-it-arena> |
 
 ### Week 12 Achievements:
 
-* Distinguished containers from virtual machines.
+* Understood the difference between containers and virtual machines.
 * Understood images, containers, Dockerfiles, and registries.
 * Understood how Amazon ECR stores container images.
-* Identified the main components of Amazon ECS.
-* Distinguished ECS on EC2 from ECS on Fargate.
+* Understood the main components of Amazon ECS.
+* Understood the difference between ECS on EC2 and ECS on Fargate.
 * Completed the Investigation Dossier and Final Defence during Prove It Day 03 and developed the Agentic Cloud Operator skill.
 * Identified improvements needed in team role assignment, time management, evidence verification, and technical defence after the Day 03 result fell below expectations.
 * Completed all three Prove It sessions; based on the combined performance across the series, Team HCM15 (Tyrex) received the award **“Most Impressive Submission from Ho Chi Minh City.”**

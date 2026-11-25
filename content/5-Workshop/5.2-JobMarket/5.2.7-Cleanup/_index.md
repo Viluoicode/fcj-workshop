@@ -12,7 +12,21 @@ pre: " <b> 5.2.7. </b> "
 
 The project uses daily batch processing, serverless query, small Glue worker settings, stage timeouts, retention rules, Athena scan limits, and a monthly budget alert.
 
-An illustrative estimate is approximately USD 13.88 per month under documented assumptions. This is not a measured bill or an official Singapore-region quotation. The final report still requires a saved AWS Pricing Calculator estimate based on observed job durations.
+### Measured Cost
+
+`scripts/run_metrics.py` measured the 7 scheduled runs of 14–20 November 2026 and compared them with Cost Explorer. These are list prices before credits:
+
+| Item | Per run (median) |
+|---|---:|
+| Glue jobs (3 jobs, 517 DPU-seconds) | USD 0.064 (Cost Explorer: USD 0.0635) |
+| Glue crawler | USD 0.049 |
+| **Glue total** | **about USD 0.11** |
+| Lambda, Step Functions, EventBridge, 6 alarms | within the free tier |
+| S3, DynamoDB | a few cents per day |
+
+With one run per day, that is about **USD 3.4 per month** for Glue. These runs were measured before parallel fetching and Iceberg were added. That change removed the crawler, which was about 44% of the Glue cost per run, so the current cost should be closer to USD 2 per month. This lower figure is an estimate until a full week is measured again.
+
+*(To fill in: a link to the saved AWS Pricing Calculator estimate based on these numbers.)*
 
 Budget alerts notify; they do not stop spending.
 
@@ -59,8 +73,7 @@ AI support accelerated research, implementation, review, and documentation, but 
 
 ## Items Remaining for Final Submission
 
-- AWS-icon architecture diagram and editable source.
-- Screenshots for the main deployment and validation steps.
+- Screenshots for the main deployment and validation steps (the architecture diagram and dashboard screenshots are done).
 - Saved AWS Pricing Calculator estimate.
 - Confirmed personal troubleshooting examples and contribution details.
 - Final review of image captions and bilingual terminology.
